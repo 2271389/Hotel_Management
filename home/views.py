@@ -10,6 +10,7 @@ def get_home(request):
     }
     return render(request, "content.html", context)
 
+<<<<<<< HEAD
 @login_required(login_url='/login')  # Nếu chưa đăng nhập, chuyển hướng đến trang login
 def home(request):
     rooms = Room.objects.all()  # Lấy tất cả dữ liệu phòng từ database
@@ -22,3 +23,6 @@ def home(request):
         'user': request.user  # Truyền thông tin người dùng vào template
     }
     return render(request, 'content.html', context)
+=======
+
+>>>>>>> edit_by_huong

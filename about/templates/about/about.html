@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu về Banana Blink Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: #000; /* Màu nền đen */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-nav .nav-link {
+        color: #fff; /* Màu chữ trắng */
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:active {
+        color: #ff0000; /* Màu chữ đỏ khi hover hoặc active */
+      }
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 24px;
+        color: #fff; /* Màu chữ trắng */
+      }
+      h1 {
+        text-align: center;
+        font-family: "Cursive", sans-serif;
+        margin-top: 30px;
+        color: #ff5722;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 20px;
+        color: #007bff;
+      }
+      p.intro {
+        text-align: center;
+        font-size: 18px;
+        margin: 20px 0;
+        padding: 0 20px;
+      }
+      .milestone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0;
+        border-top: 2px solid #ddd;
+        padding-top: 20px;
+      }
+      .milestone:first-child {
+        border-top: none;
+      }
+      .milestone img {
+        width: 480px; /* Giới hạn chiều rộng */
+        height: 500px; /* Giới hạn chiều cao */
+        object-fit: cover; /* Giữ tỉ lệ hình ảnh */
+        margin: 0 20px;
+      }
+      .name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #28a745;
+      }
+      .description {
+        font-size: 16px;
+        color: #555;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <a href="/"><h1 id="logo-text">Banana Blink</h1></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+              <nav class="navigation navbar navbar-expand-md navbar-dark">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample04"
+                  aria-controls="navbarsExample04"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'list_room' %}"
+                        >Our room</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      {% comment %}
+                      <a class="nav-link" href="{% url 'statistic' %}"
+                        >Statistics</a
+                      >
+                      {% endcomment %}
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Giới thiệu về Banana Blink Hotel</h1>
+      <p class="intro">
+        Banana Blink Hotel không chỉ là một khách sạn, mà còn là một trải nghiệm
+        sống động, nơi mà sự lung linh và mượt mà như quả chuối kết hợp với dịch
+        vụ tuyệt vời, chắc chắn sẽ để lại dấu ấn khó quên trong lòng mỗi du
+        khách.
+      </p>
+      <h2>Những người sáng lập</h2>
+
+      <div class="milestone">
+        <div>
+          <div class="name">Quốc Đông</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+        <img
+          src="https://i.pinimg.com/564x/d5/a3/a2/d5a3a2f361b61f218b53f41a3da6bc84.jpg"
+          alt="Quốc Đông"
+        />
+      </div>
+
+      <div class="milestone">
+        <img
+          src="https://i.pinimg.com/236x/4f/fe/83/4ffe83c7aabc209f94d738fd7f6053ed.jpg"
+          alt="Trọng Hiếu"
+        />
+        <div>
+          <div class="name">Trọng Hiếu</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone">
+        <div>
+          <div class="name">Lan Hương</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+        <img
+          src="https://i.pinimg.com/236x/8b/0c/be/8b0cbe5698abd1a940b7e54e712ec682.jpg"
+          alt="Lan Hương"
+        />
+      </div>
+
+      <div class="milestone">
+        <img
+          src="https://i.pinimg.com/control/236x/c2/0a/7e/c20a7e8a7fcaf7990d558025a1cf8ad9.jpg"
+          alt="Ánh Nhàn"
+        />
+        <div>
+          <div class="name">Ánh Nhàn</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone">
+        <div>
+          <div class="name">Hữu Phước</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+        <img
+          src="https://i.pinimg.com/474x/24/03/7f/24037fba35b7bf7a5b63aff142ff1b9d.jpg"
+          alt="Hữu Phước"
+        />
+      </div>
+
+      <div class="milestone">
+        <img
+          src="https://i.pinimg.com/control/236x/5c/63/fa/5c63fa8e19e137d1067c5c58facc7bfe.jpg"
+          alt="Huyền Trân"
+        />
+        <div>
+          <div class="name">Huyền Trân</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone">
+        <div>
+          <div class="name">Thanh Tâm</div>
+          <div class="description">
+            Sinh viên học công nghệ thông tin, trường đại học Tây Nguyên.
+          </div>
+        </div>
+        <img
+          src="https://i.pinimg.com/control/236x/9f/9a/fb/9f9afbf77aed3ba8ed2d29cd3f7b5519.jpg"
+          alt="Thanh Tâm"
+        />
+      </div>
+
+      <p class="intro">
+        Chúng tôi hy vọng rằng những giá trị mà chúng tôi mang lại sẽ khiến bạn
+        hài lòng và quay trở lại với chúng tôi trong tương lai.
+      </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
